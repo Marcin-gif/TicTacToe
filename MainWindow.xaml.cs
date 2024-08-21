@@ -18,11 +18,11 @@ namespace TicTacToe
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool turn = true;
-        int countTurn = 0;
-        int winnerXCount = 0;
-        int winnerOCount = 0;
-        Window1 w1;
+        private bool turn = true;
+        private int countTurn = 0;
+        private int winnerXCount = 0;
+        private int winnerOCount = 0;
+        private Window1 w1;
         public MainWindow()
         {
             InitializeComponent();
