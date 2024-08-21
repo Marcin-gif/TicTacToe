@@ -93,18 +93,25 @@ namespace TicTacToe
             {
                 thereIsAWinner = true;
             }
-            
 
+            showMessageResult(thereIsAWinner);
+
+
+
+        }
+        private void showMessageResult(bool thereIsAWinner)
+        {
             StringBuilder winner = new StringBuilder();
             if (thereIsAWinner)
             {
                 disabledButtons();
-                if(turn)
+                if (turn)
                 {
                     winner.Append("O");
                     winnerOCount++;
-                    
-                }else {
+                }
+                else
+                {
                     winner.Append("X");
                     winnerXCount++;
                 }
@@ -114,17 +121,18 @@ namespace TicTacToe
                 xCounter.Content = winnerXCount.ToString();
                 oCounter.Content = winnerOCount.ToString();
 
-            }else
+            }
+            else
             {
-                if(countTurn == 9)
+                if (countTurn == 9)
                 {
                     MessageBox.Show("draw");
                     w1 = new Window1(restartGame);
-                    w1.Show();  
+                    w1.Show();
                 }
             }
-            
         }
+
         private void disabledButtons()
         {
             foreach (UIElement e in MyPanel.Children)
